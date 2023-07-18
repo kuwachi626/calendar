@@ -13,7 +13,7 @@ header{
     height: 80px;
     width: 100vw;
     max-width: 800px;
-    min-width: 410px;
+    min-width: 500px;
     margin: 0 auto;
 }
 
@@ -41,13 +41,13 @@ header{
     height: 810px;
     width: 100vw;
     max-width: 800px;
-    min-width: 410px;
+    min-width: 500px;
     margin: 0 auto;
 }
 
 .illustration {
     width: 50%;
-    min-width: 400px;
+    min-width: 500px;
     height: 40%;
     margin: 0 auto;
 }
@@ -65,7 +65,7 @@ header{
     .blank{display: none}
     .main{
         height: 80vh;
-        min-height:400px;
+        min-height:470px;
     }
 }
 
@@ -104,6 +104,38 @@ td:last-child {
     color:#0026ff;
 }
 
+td a {
+    cursor: pointer;
+}
+
+.omi1{
+    color: #9500ff;
+}
+
+.omi2{
+    color: #0008fd;
+}
+
+.omi3{
+    color: #00d5ff;
+}
+
+.omi4{
+    color: #00ff08;
+}
+
+.omi5{
+    color: #fff700;
+}
+
+.omi6{
+    color: #ff8400;
+}
+
+.omi7{
+    color: #f80000;
+}
+
 .today {
     font-size: 30px;
     padding-top: 20px;
@@ -135,7 +167,7 @@ footer{
     height: 80px;
     width: 100vw;
     max-width: 800px;
-    min-width: 410px;
+    min-width: 500px;
     margin: 0 auto;
 }
 

@@ -8,9 +8,13 @@ const illust = ["illustration/January.png", "illustration/February.png", "illust
                 "illustration/July.png", "illustration/August.png", "illustration/September.png",
                 "illustration/October.png", "illustration/November.png", "illustration/December.png"
               ]
+const omikuji = ['<h1 class="omi1"><b>' + "大凶" + '</b></h1>', '<h1 class="omi2"><b>' + "凶" + '</b></h1>', '<h1 class="omi3"><b>' + "末吉" + '</b></h1>', 
+                 '<h1 class="omi4"><b>' + "吉" + '</b></th1>', '<h1 class="omi5"><b>' + "小吉" + '</b></h1>', '<h1 class="omi6"><b>' + "中吉" + '</b></h1>', '<h1 class="omi7"><b>' + "大吉" + '</b></h1>'
+               ]
 const today = new Date();
 var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 var req;
+var count2 = 0;
 
 window.onload = function () {
   req = new XMLHttpRequest();
@@ -29,6 +33,13 @@ function previous(){
 function next(){
   showDate.setMonth(showDate.getMonth() + 1);
   showProcess(showDate);
+}
+
+function Select(){
+  if (count2 == 0){
+    document.querySelector('#divination').innerHTML = omikuji[Math.floor(Math.random()*omikuji.length)];
+  }
+  count2++;
 }
 
 function showProcess(date) {
@@ -105,9 +116,9 @@ function createCalendar(year, month) {
                 && month == (today.getMonth())
                 && count == today.getDate()){
                   if(checkDate(req.responseText, year, month, count)) {
-                    calendar += "<td class='todayHoliday'><b>" + count + "<p>Today</p></b><p2>" + Holidayname(req.responseText, year, month, count) + "</p2></td>";
+                    calendar += '<td class="todayHoliday"><a id="divination" onclick="Select();"><b>' + count + "<p>Today</p></b><p2>" + Holidayname(req.responseText, year, month, count) + "</p2></a></td>";
                   }else{
-                    calendar += "<td class='today'><b>" + count + "<p>Today</p></b></td>";
+                    calendar += '<td class="today"><a id="divination" onclick="Select();"><b>' + count + "<p>Today</p></b></a></td>";
                   }
               } else if (checkDate(req.responseText, year, month, count)){
                 calendar += "<td class='Holiday'>" + count + "<p>" + Holidayname(req.responseText, year, month, count) + "</p></td>";

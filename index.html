@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カレンダー</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+    
+        <div class="header-logo" id="month"></div>
+
+        <div class="header-list">
+            <ul>
+                
+                <li id="month2"></li>
+                <li class="selected" id="year"></li>
+                
+            </ul>
+        </div>
+        
+    </header>
+
+    <div class="main">
+        
+        
+        <div id="monthimg" class="illustration"></div>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div id="calendar" class="day"></div>
+
+    </div>
+
+    <footer>
+        <button id="btn-prev" onclick="previous();">前の月</button>
+        <button class="btn-next" id="btn-next" onclick="next();">次の月</button>
+    </footer>
+    
+</body>
+</html>

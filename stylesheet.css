@@ -3,10 +3,9 @@
     padding: 0px;
 }
 
-
-
 html, body {
     font-family: "Avenir Next";
+    height: 100vh;
 }
 
 header{
@@ -29,8 +28,6 @@ header{
 .header-list .selected{
     float: right;
 }
-
-
 
 .header-logo{
     font-size: 50px;
@@ -63,8 +60,14 @@ header{
     display: block;
 }
 
-
-
+@media (max-height: 600px) {
+    .illustration{display:none}
+    .blank{display: none}
+    .main{
+        height: 80vh;
+        min-height:400px;
+    }
+}
 
 .day table {
     width: 100%;
@@ -96,6 +99,7 @@ th, td {
 td:first-child {
     color:#ff0000;
 }
+
 td:last-child {
     color:#0026ff;
 }
@@ -152,9 +156,10 @@ button:active {
     top: 7px;
 
 }
+
 button:hover {
     opacity: 1;
-  }
+}
 
 .btn-next {
     float: right;   

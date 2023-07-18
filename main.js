@@ -25,17 +25,22 @@ window.onload = function () {
   };
 };
 
-function previous(){
+function previous() {
   showDate.setMonth(showDate.getMonth() - 1);
   showProcess(showDate);
 }
 
-function next(){
+function current() {
+  showDate.setMonth(today.getMonth());
+  showProcess(showDate);
+}
+
+function next() {
   showDate.setMonth(showDate.getMonth() + 1);
   showProcess(showDate);
 }
 
-function Select(){
+function Select() {
   if (count2 == 0){
     document.querySelector('#divination').innerHTML = omikuji[Math.floor(Math.random()*omikuji.length)];
   }
@@ -55,10 +60,7 @@ function showProcess(date) {
 
 function checkDate(str, year, month, day) {
   let dataArr = [];
-  let checkDate =
-    year +
-    '/' + (month + 1) +
-    '/' + day;
+  let checkDate = year + '/' + (month + 1) + '/' + day;
   let tmp = str.split('\n');
   let isHoliday = false;
   for (let i=0; i< tmp.length; i++) {

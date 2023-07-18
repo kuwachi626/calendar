@@ -8,7 +8,7 @@ html, body {
     height: 100vh;
 }
 
-header{
+header {
     background: #fd0000;
     height: 80px;
     width: 100vw;
@@ -17,7 +17,7 @@ header{
     margin: 0 auto;
 }
 
-.header-list li{
+.header-list li {
     list-style: none;
     float: left;
     color: #fff;
@@ -25,11 +25,11 @@ header{
     font-size: 30px;
 }
 
-.header-list .selected{
+.header-list .selected {
     float: right;
 }
 
-.header-logo{
+.header-logo {
     font-size: 50px;
     float: left;
     color: #fff;
@@ -108,31 +108,31 @@ td a {
     cursor: pointer;
 }
 
-.omi1{
+.omi1 {
     color: #9500ff;
 }
 
-.omi2{
+.omi2 {
     color: #0008fd;
 }
 
-.omi3{
+.omi3 {
     color: #00d5ff;
 }
 
-.omi4{
+.omi4 {
     color: #00ff08;
 }
 
-.omi5{
+.omi5 {
     color: #fff700;
 }
 
-.omi6{
+.omi6 {
     color: #ff8400;
 }
 
-.omi7{
+.omi7 {
     color: #f80000;
 }
 
@@ -145,7 +145,7 @@ td a {
     font-size: 15px;
 }
 
-.todayHoliday  {
+.todayHoliday {
     color:#ff0000;
 }
 
@@ -162,13 +162,14 @@ td a {
     font-size: 10px;
 }
 
-footer{
+footer {
     background: #05031f;
     height: 80px;
     width: 100vw;
     max-width: 800px;
     min-width: 500px;
     margin: 0 auto;
+    text-align: center;
 }
 
 button {
@@ -180,6 +181,7 @@ button {
     background-color: #5dca88;
     border-bottom:1px solid #eee;
     box-shadow: 0px 7px #1a7940;
+    display: inline-block;
 }
 
 button:active {
@@ -193,8 +195,11 @@ button:hover {
     opacity: 1;
 }
 
+.btn-prev {
+    float: left;
+}
+
 .btn-next {
-    float: right;   
-    
+    float: right;
 }
   

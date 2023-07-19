@@ -25,6 +25,14 @@ header {
     font-size: 30px;
 }
 
+.selectyear {
+    width: 4em;
+}
+
+.selectmonth {
+    width: 2em;
+}
+
 .header-list .selected {
     float: right;
 }

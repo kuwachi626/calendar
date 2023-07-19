@@ -16,6 +16,7 @@ var showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 var req;
 var count2 = 0;
 
+
 window.onload = function () {
   req = new XMLHttpRequest();
   req.open('get', 'holiday/syukujitsu.csv', true);
@@ -31,7 +32,7 @@ function previous() {
 }
 
 function current() {
-  showDate.setMonth(today.getMonth());
+  showDate.setFullYear(today.getFullYear(), today.getMonth());
   showProcess(showDate);
 }
 
@@ -47,6 +48,16 @@ function Select() {
   count2++;
 }
 
+function Selectyear(y) {
+  showDate.setFullYear(y);
+  showProcess(showDate);
+}
+
+function Selectmonth(m) {
+  showDate.setMonth(m-1);
+  showProcess(showDate);
+}
+
 function showProcess(date) {
   var year = date.getFullYear();
   var month = date.getMonth();
@@ -56,6 +67,22 @@ function showProcess(date) {
   document.querySelector('#year').innerHTML = (year);
   var calendar = createCalendar(year, month);
   document.querySelector('#calendar').innerHTML = calendar;
+  var yearText = document.getElementById('yearText');
+  yearText.addEventListener('keypress', test_ivent);
+  var monthText = document.getElementById('monthText');
+  monthText.addEventListener('keypress', test_ivent2);
+}
+
+function test_ivent(e) {
+  if (e.keyCode === 13) {
+    Selectyear(yearText.value);
+  }  
+}
+
+function test_ivent2(e) {
+  if (e.keyCode === 13) {
+    Selectmonth(monthText.value); 
+  }  
 }
 
 function checkDate(str, year, month, day) {
